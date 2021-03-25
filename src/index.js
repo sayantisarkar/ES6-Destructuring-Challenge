@@ -19,20 +19,42 @@
 //CHALLENGE: uncomment the code below and see the car stats rendered
 import React from "react";
 import ReactDOM from "react-dom";
+import cars from "./practice";
+
+const [honda, tesla] = cars;
+console.log(honda);
+
+const {
+  model: hondaModel,
+  coloursByPopularity: [hondaTopColour, color2],
+  speedStats: { topSpeed: hondaTopSpeed }
+} = honda;
+const {
+  model: teslaModel,
+  coloursByPopularity: [teslaTopColour, color3],
+  speedStats: { topSpeed: teslaTopSpeed }
+} = tesla;
+// console.log(hondaModel);
+// console.log(hondaTopSpeed);
+//console.log(zeroToSixty);
+//console.log(coloursByPopularity);
+//console.log(hondaTopColour);
+//console.log(color2);
 
 ReactDOM.render(
   <table>
     <tr>
       <th>Brand</th>
       <th>Top Speed</th>
+      <th>Top Color</th>
     </tr>
     <tr>
-      <td>{tesla.model}</td>
+      <td>{teslaModel}</td>
       <td>{teslaTopSpeed}</td>
       <td>{teslaTopColour}</td>
     </tr>
     <tr>
-      <td>{honda.model}</td>
+      <td>{hondaModel}</td>
       <td>{hondaTopSpeed}</td>
       <td>{hondaTopColour}</td>
     </tr>
